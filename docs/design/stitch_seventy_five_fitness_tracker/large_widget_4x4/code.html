@@ -1,0 +1,259 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Seventy Five - Widget</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Injected from System) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#353535",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container": "#1f1f1f",
+                    "primary-fixed": "#e2e2e2",
+                    "on-background": "#e2e2e2",
+                    "outline": "#8e9192",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#303030",
+                    "secondary-container": "#4a4949",
+                    "on-surface": "#e2e2e2",
+                    "tertiary": "#ffffff",
+                    "surface": "#131313",
+                    "on-tertiary": "#003909",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-container": "#e2e2e2",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "tertiary-container": "#a3f69c",
+                    "on-primary": "#2f3131",
+                    "on-secondary-container": "#bab8b7",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#454747",
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed-variant": "#005312",
+                    "surface-container-low": "#1b1b1b",
+                    "outline-variant": "#444748",
+                    "surface-tint": "#c6c6c6",
+                    "surface-bright": "#393939",
+                    "secondary": "#c8c6c5",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#237329",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#88d982",
+                    "tertiary-fixed": "#a3f69c",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c4c7c8",
+                    "on-error": "#690005",
+                    "on-secondary": "#313030",
+                    "on-tertiary-fixed": "#002204",
+                    "inverse-primary": "#5d5f5f",
+                    "surface-variant": "#353535",
+                    "on-primary-fixed": "#1a1c1c",
+                    "on-primary-container": "#636465",
+                    "on-secondary-fixed-variant": "#474646",
+                    "background": "#131313",
+                    "on-secondary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "40px",
+                    "sm": "8px",
+                    "container-max": "1200px",
+                    "xxl": "80px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "button": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "display-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom styles to enforce strict typographic and aesthetic rules */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex items-center justify-center p-gutter">
+<!-- 4x4 Widget Container (Simulated size for mobile grid) -->
+<div class="w-[340px] aspect-square bg-surface-container-lowest border border-surface-variant rounded-[32px] p-md flex flex-col relative overflow-hidden shadow-2xl shadow-black/50">
+<!-- Header: Day & Streak -->
+<div class="flex justify-between items-end mb-sm px-xs">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter uppercase leading-none">Day 42</h2>
+<!-- Weekly Streak Indicator -->
+<div class="flex gap-1 pb-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-high border border-outline-variant"></div>
+<div class="w-1.5 h-1.5 rounded-full border border-surface-variant"></div>
+</div>
+</div>
+<!-- Master Divider -->
+<div class="w-full h-px bg-surface-variant mb-xs"></div>
+<!-- Tasks Breakdown -->
+<div class="flex-1 flex flex-col justify-between">
+<!-- Nutrition -->
+<div class="flex justify-between items-center py-2 px-xs border-b border-surface-container border-opacity-50">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">NUTRITION</span>
+<span class="material-symbols-outlined fill text-primary text-[20px]" data-icon="check_circle">check_circle</span>
+</div>
+<!-- Workouts -->
+<div class="flex justify-between items-center py-2 px-xs border-b border-surface-container border-opacity-50">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">WORKOUTS</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined fill text-primary text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="material-symbols-outlined text-outline-variant text-[20px]" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Water (Interactive Stepper) -->
+<div class="flex justify-between items-center py-2 px-xs border-b border-surface-container border-opacity-50 group cursor-pointer hover:bg-surface-container-high transition-colors -mx-xs px-xs">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">WATER</span>
+<div class="flex items-center gap-4 border border-surface-variant bg-surface-container px-2 py-1">
+<span class="material-symbols-outlined text-outline hover:text-primary transition-colors text-[16px]" data-icon="remove">remove</span>
+<span class="font-button text-button text-primary min-w-[32px] text-center">3/4</span>
+<span class="material-symbols-outlined text-outline hover:text-primary transition-colors text-[16px]" data-icon="add">add</span>
+</div>
+</div>
+<!-- Reading (Interactive Stepper) -->
+<div class="flex justify-between items-center py-2 px-xs border-b border-surface-container border-opacity-50 group cursor-pointer hover:bg-surface-container-high transition-colors -mx-xs px-xs">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">READING</span>
+<div class="flex items-center gap-4 border border-surface-variant bg-surface-container px-2 py-1">
+<span class="material-symbols-outlined text-outline hover:text-primary transition-colors text-[16px]" data-icon="remove">remove</span>
+<span class="font-button text-button text-primary min-w-[32px] text-center">0/10</span>
+<span class="material-symbols-outlined text-outline hover:text-primary transition-colors text-[16px]" data-icon="add">add</span>
+</div>
+</div>
+<!-- Progress Pic (Action Button) -->
+<div class="flex justify-between items-center pt-2 pb-1 px-xs">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">PROGRESS PIC</span>
+<button class="bg-primary text-background font-button text-button uppercase px-3 py-1.5 flex items-center gap-2 hover:bg-secondary-fixed transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-[16px]" data-icon="photo_camera">photo_camera</span>
+<span>SNAP</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
