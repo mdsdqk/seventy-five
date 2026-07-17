@@ -1,282 +1,357 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>SEVENTY FIVE - History</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-fixed": "#e5e2e1",
-                      "surface-variant": "#353535",
-                      "surface-tint": "#c6c6c6",
-                      "on-error-container": "#ffdad6",
-                      "surface-container-highest": "#353535",
-                      "surface-container-low": "#1b1b1b",
-                      "on-primary-fixed-variant": "#454747",
-                      "on-primary-container": "#636465",
-                      "primary-fixed-dim": "#c6c6c6",
-                      "tertiary-fixed-dim": "#88d982",
-                      "on-primary-fixed": "#1a1c1c",
-                      "background": "#131313",
-                      "on-secondary-container": "#bab8b7",
-                      "error-container": "#93000a",
-                      "on-error": "#690005",
-                      "tertiary": "#ffffff",
-                      "inverse-surface": "#e2e2e2",
-                      "surface-container": "#1f1f1f",
-                      "on-tertiary-fixed-variant": "#005312",
-                      "secondary-fixed-dim": "#c8c6c5",
-                      "on-secondary-fixed": "#1c1b1b",
-                      "tertiary-container": "#a3f69c",
-                      "secondary-container": "#4a4949",
-                      "on-background": "#e2e2e2",
-                      "inverse-primary": "#5d5f5f",
-                      "on-tertiary": "#003909",
-                      "outline-variant": "#444748",
-                      "on-tertiary-fixed": "#002204",
-                      "secondary": "#c8c6c5",
-                      "surface-dim": "#131313",
-                      "surface": "#131313",
-                      "error": "#ffb4ab",
-                      "on-primary": "#2f3131",
-                      "inverse-on-surface": "#303030",
-                      "on-secondary-fixed-variant": "#474646",
-                      "surface-container-high": "#2a2a2a",
-                      "primary-container": "#e2e2e2",
-                      "outline": "#8e9192",
-                      "tertiary-fixed": "#a3f69c",
-                      "on-secondary": "#313030",
-                      "primary-fixed": "#e2e2e2",
-                      "primary": "#ffffff",
-                      "on-tertiary-container": "#237329",
-                      "surface-bright": "#393939",
-                      "surface-container-lowest": "#0e0e0e",
-                      "on-surface-variant": "#c4c7c8",
-                      "on-surface": "#e2e2e2"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "xxl": "80px",
-                      "xs": "4px",
-                      "lg": "24px",
-                      "xl": "40px",
-                      "gutter": "24px",
-                      "md": "16px",
-                      "unit": "4px",
-                      "container-max": "1200px",
-                      "sm": "8px"
-              },
-              "fontFamily": {
-                      "display-lg-mobile": [
-                              "Playfair Display"
-                      ],
-                      "label-caps": [
-                              "Inter"
-                      ],
-                      "body-md": [
-                              "Inter"
-                      ],
-                      "headline-md": [
-                              "Playfair Display"
-                      ],
-                      "button": [
-                              "Inter"
-                      ],
-                      "display-lg": [
-                              "Playfair Display"
-                      ],
-                      "body-lg": [
-                              "Inter"
-                      ],
-                      "headline-lg": [
-                              "Playfair Display"
-                      ]
-              },
-              "fontSize": {
-                      "display-lg-mobile": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "1",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "24px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "button": [
-                              "14px",
-                              {
-                                      "lineHeight": "1",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "display-lg": [
-                              "64px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-lg": [
-                              "32px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "600"
-                              }
-                      ]
-              }
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SEVENTY FIVE - History</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#e5e2e1",
+              "surface-variant": "#353535",
+              "surface-tint": "#c6c6c6",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353535",
+              "surface-container-low": "#1b1b1b",
+              "on-primary-fixed-variant": "#454747",
+              "on-primary-container": "#636465",
+              "primary-fixed-dim": "#c6c6c6",
+              "tertiary-fixed-dim": "#88d982",
+              "on-primary-fixed": "#1a1c1c",
+              background: "#131313",
+              "on-secondary-container": "#bab8b7",
+              "error-container": "#93000a",
+              "on-error": "#690005",
+              tertiary: "#ffffff",
+              "inverse-surface": "#e2e2e2",
+              "surface-container": "#1f1f1f",
+              "on-tertiary-fixed-variant": "#005312",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed": "#1c1b1b",
+              "tertiary-container": "#a3f69c",
+              "secondary-container": "#4a4949",
+              "on-background": "#e2e2e2",
+              "inverse-primary": "#5d5f5f",
+              "on-tertiary": "#003909",
+              "outline-variant": "#444748",
+              "on-tertiary-fixed": "#002204",
+              secondary: "#c8c6c5",
+              "surface-dim": "#131313",
+              surface: "#131313",
+              error: "#ffb4ab",
+              "on-primary": "#2f3131",
+              "inverse-on-surface": "#303030",
+              "on-secondary-fixed-variant": "#474646",
+              "surface-container-high": "#2a2a2a",
+              "primary-container": "#e2e2e2",
+              outline: "#8e9192",
+              "tertiary-fixed": "#a3f69c",
+              "on-secondary": "#313030",
+              "primary-fixed": "#e2e2e2",
+              primary: "#ffffff",
+              "on-tertiary-container": "#237329",
+              "surface-bright": "#393939",
+              "surface-container-lowest": "#0e0e0e",
+              "on-surface-variant": "#c4c7c8",
+              "on-surface": "#e2e2e2",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              xxl: "80px",
+              xs: "4px",
+              lg: "24px",
+              xl: "40px",
+              gutter: "24px",
+              md: "16px",
+              unit: "4px",
+              "container-max": "1200px",
+              sm: "8px",
+            },
+            fontFamily: {
+              "display-lg-mobile": ["Playfair Display"],
+              "label-caps": ["Inter"],
+              "body-md": ["Inter"],
+              "headline-md": ["Playfair Display"],
+              button: ["Inter"],
+              "display-lg": ["Playfair Display"],
+              "body-lg": ["Inter"],
+              "headline-lg": ["Playfair Display"],
+            },
+            fontSize: {
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "1",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "1.3",
+                  fontWeight: "600",
+                },
+              ],
+              button: [
+                "14px",
+                {
+                  lineHeight: "1",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "1.6",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "1.2",
+                  fontWeight: "600",
+                },
+              ],
             },
           },
-        }
+        },
+      };
     </script>
-<style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #000000;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #262626;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #353535;
-        }
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #262626;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #353535;
+      }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
   </head>
-<body class="antialiased min-h-screen pb-24 md:pb-0">
-<!-- TopAppBar -->
-<header class="bg-background dark:bg-background w-full top-0 sticky z-40 border-b border-[#262626]">
-<div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
-<div class="flex items-center gap-sm">
-<span class="material-symbols-outlined text-primary dark:text-primary" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
-</div>
-<h1 class="font-display-lg text-headline-md font-bold tracking-tight text-primary dark:text-primary m-0 uppercase">SEVENTY FIVE</h1>
-<div>
-<span class="font-button text-button uppercase text-primary dark:text-primary px-3 py-1 border border-[#262626]">DAY 42</span>
-</div>
-</div>
-</header>
-<!-- Main Content Canvas -->
-<main class="max-w-container-max mx-auto px-gutter pt-xl pb-xxl">
-<div class="mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-2 uppercase tracking-tighter">HISTORY</h2>
-<div class="h-px w-full bg-[#262626] mt-sm"></div>
-</div>
-<!-- History Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-<!-- Day 41 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Black and white fitness progress photo, highly contrasting studio lighting, moody atmosphere, minimalist background, focus on physical form, extremely sharp details. The image should convey discipline and intense effort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC96CXir9HLHQ_xzZai1La9GoqD7AjvGS86MLBDyOCLPwEeFlNWp1uYLlEGOfSo-AgwwLqQkoolg1i8zt_xgEJ6jQ_BOQh8pB2HoAE91808t1mr8v4FNJdBuMY69VdCZW5b8I317M1Y9TWpdNf0KKkprF4M13IktAqi_Ru6aO1UOsRSMZ9bW75Z22UBLZHmWduazDwb0ho_l9p4jMzUfDuyznX6SdXMJgI8kOEJTgmuGSYY_w_qI7Ljb9fxO6ErQEiFUsRtDpRIW-U">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">41</span>
-</div>
-</div>
-<!-- Day 40 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Monochrome, high-contrast mirror selfie in a dark, austere gym environment. Deep shadows, stark lighting emphasizing muscle definition and sweat. The mood is solitary, focused, and intensely disciplined, characteristic of high-end fitness editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZanoELkGwt1XAuwahkZyRDapTBPAYRO6fFdgsWdp4_RWRsvY1CaTrfq6Hrv833p4TP-RJ_BcVw9eGt0j_gRwr2naDnMDiedgJpCpmhRgutso06kcsBYO0lzYUPjxNJfdW7t2pjlyAZ7iTCLCbUk3sUDD9gu_hRKEIw00J18glHEA7S3tUeF63h8tKICc9c73zq0pMkAS6i5gY8_vPrcxBq_HkP5cq06kR9GuHsQf40gMh7yTWu0Xgo_ylDj4todecA-eAl6aHlHc">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">40</span>
-</div>
-</div>
-<!-- Day 39 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Close up shot of athletic gear and a water bottle resting on a dark, textured floor. Extreme black and white, stark minimalist composition. The scene exudes silent determination and the aftermath of a grueling workout. High-end, serious aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS_fdT7QT4Mw4Eh5WmlFC4uYTe4E87r9VwBnMLT7ephqvWtPJ28ZrOHQf9aJYPxaHYov_kJE_bacTVzzIV2BzdLBjhxC6-huUD0xV9KclXORKp4KDisrHwJ3pZpDVWTE5mwFkXNgZV_MgN10Rdn4Xn6HaglsWioXhdUQ43v2dUxNB0gUCklQ2rDIaYjv7h0bMzL-mAd-eTN6jFx5oda-wJQmeykQCqXM2MgeqC9SbMWszubrJKqWmBphurV5AnkvPMafxIjMGZf9c">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">39</span>
-</div>
-</div>
-<!-- Day 38 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Silhouetted figure running against a bleak, overcast sky. Pure black and white. Wide shot emphasizing the vastness of the space and the solitary nature of the endeavor. Cold, disciplined, minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgtzNFR2tc9EYUTP2-G0aszg6Yt93Odf17EjcpDL_Drny2O4N_f_XKhmUbAXqIqojFmYGhuh25HiRCXe8_nhoe1iwPLjkoDGXCSmUI05-qRMYaP6Ky_oFfn8sH6NZEqmdeMxBmOsplY_V-HNLVyqpTe2tpAN9W8gM4z5qR1qa16yvOsH5mWF2gSr1vyD_m97QDgGjH2ZMoEjKpW_asB_xXW7QSeznNvyAvkgoFMSq99vQTc5NCv00NZAHZMjnYgUoYvbN5TzlbL9k">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">38</span>
-</div>
-</div>
-<!-- Day 37 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Detail shot of hands gripping a heavily knurled barbell in a dark gym. Stark lighting creates deep shadows and brilliant highlights on the metal. Black and white, intense focus, gritty yet sophisticated visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7WRPxodrSGoGeC8s_Bw-_iKoCYzJ_9ZWHnBjV9ffIw70ZDaUgxOITxPkvKms6AVXraJnqCY6yu7qpsUlO8AXqeU7nLTiGse4CEvUPwQ448_GcoartEVvjiZ6WACdrfHAqnlKyfwnKocgXkLV52hwqQ1woKWz9xUEJ_HV9SHXty5bCXDpd-aPSNbDAdnfi6XFKK354vbgq-b9Yc4pZrCYeKCcKooqmygQeksj0Ug79Ufwl9RfzvPujlbGzmhc0bKgpGYTXkKye_RA">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">37</span>
-</div>
-</div>
-<!-- Day 36 -->
-<div class="group relative aspect-square bg-[#121212] overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale" data-alt="Abstract, high-contrast shot of sweat drops on a dark floor surface. Extreme macro photography, black and white. The aesthetic is raw, minimalist, and deeply evocative of physical exertion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq2MJo8jLexqFwovDJ6Ie-fY_SbwqGQpUriipNQBFkosi0t8PasryhKtfzWnAeYE59-Sf-4gi3MdnuoQYZcuKTu2nl6RsmG6zI8O1yATY_hLxjRVzKbDKSt27txlv32dmDylcLQL46qcNB-39PkSx-6u3ndV7Fd_REvatb-DJp-FloX-DhBdbt9kqzgunTjYgfZ5iGOTy5y80BmnXauNmAd53EyUzN8bVPTxkbE7Us2KHMJ1wfM3asS9-4r7M0gDZAs-vkwdryaKU">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute bottom-md left-md">
-<span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0">36</span>
-</div>
-</div>
-</div>
-<div class="mt-lg flex justify-center">
-<button class="px-xl py-md border border-[#262626] font-button text-button uppercase text-primary hover:bg-[#121212] transition-colors">Load More</button>
-</div>
-</main>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pb-lg pt-sm bg-background border-t border-[#262626]">
-<a class="flex flex-col items-center gap-1 text-outline dark:text-outline pt-2 hover:text-primary transition-colors active:scale-95 duration-100" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-primary dark:text-primary border-t-2 border-primary pt-2 hover:text-primary transition-colors active:scale-95 duration-100" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
-</a>
-</nav>
-</body></html>
+  <body class="antialiased min-h-screen pb-24 md:pb-0">
+    <!-- TopAppBar -->
+    <header
+      class="bg-background dark:bg-background w-full top-0 sticky z-40 border-b border-[#262626]"
+    >
+      <div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
+        <div class="flex items-center gap-sm">
+          <span
+            class="material-symbols-outlined text-primary dark:text-primary"
+            style="font-variation-settings: &quot;FILL&quot; 0"
+            >calendar_today</span
+          >
+        </div>
+        <h1
+          class="font-display-lg text-headline-md font-bold tracking-tight text-primary dark:text-primary m-0 uppercase"
+        >
+          SEVENTY FIVE
+        </h1>
+        <div>
+          <span
+            class="font-button text-button uppercase text-primary dark:text-primary px-3 py-1 border border-[#262626]"
+            >DAY 42</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="max-w-container-max mx-auto px-gutter pt-xl pb-xxl">
+      <div class="mb-xl">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-2 uppercase tracking-tighter">
+          HISTORY
+        </h2>
+        <div class="h-px w-full bg-[#262626] mt-sm"></div>
+      </div>
+      <!-- History Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+        <!-- Day 41 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Black and white fitness progress photo, highly contrasting studio lighting, moody atmosphere, minimalist background, focus on physical form, extremely sharp details. The image should convey discipline and intense effort."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC96CXir9HLHQ_xzZai1La9GoqD7AjvGS86MLBDyOCLPwEeFlNWp1uYLlEGOfSo-AgwwLqQkoolg1i8zt_xgEJ6jQ_BOQh8pB2HoAE91808t1mr8v4FNJdBuMY69VdCZW5b8I317M1Y9TWpdNf0KKkprF4M13IktAqi_Ru6aO1UOsRSMZ9bW75Z22UBLZHmWduazDwb0ho_l9p4jMzUfDuyznX6SdXMJgI8kOEJTgmuGSYY_w_qI7Ljb9fxO6ErQEiFUsRtDpRIW-U"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >41</span
+            >
+          </div>
+        </div>
+        <!-- Day 40 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Monochrome, high-contrast mirror selfie in a dark, austere gym environment. Deep shadows, stark lighting emphasizing muscle definition and sweat. The mood is solitary, focused, and intensely disciplined, characteristic of high-end fitness editorial photography."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZanoELkGwt1XAuwahkZyRDapTBPAYRO6fFdgsWdp4_RWRsvY1CaTrfq6Hrv833p4TP-RJ_BcVw9eGt0j_gRwr2naDnMDiedgJpCpmhRgutso06kcsBYO0lzYUPjxNJfdW7t2pjlyAZ7iTCLCbUk3sUDD9gu_hRKEIw00J18glHEA7S3tUeF63h8tKICc9c73zq0pMkAS6i5gY8_vPrcxBq_HkP5cq06kR9GuHsQf40gMh7yTWu0Xgo_ylDj4todecA-eAl6aHlHc"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >40</span
+            >
+          </div>
+        </div>
+        <!-- Day 39 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Close up shot of athletic gear and a water bottle resting on a dark, textured floor. Extreme black and white, stark minimalist composition. The scene exudes silent determination and the aftermath of a grueling workout. High-end, serious aesthetic."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS_fdT7QT4Mw4Eh5WmlFC4uYTe4E87r9VwBnMLT7ephqvWtPJ28ZrOHQf9aJYPxaHYov_kJE_bacTVzzIV2BzdLBjhxC6-huUD0xV9KclXORKp4KDisrHwJ3pZpDVWTE5mwFkXNgZV_MgN10Rdn4Xn6HaglsWioXhdUQ43v2dUxNB0gUCklQ2rDIaYjv7h0bMzL-mAd-eTN6jFx5oda-wJQmeykQCqXM2MgeqC9SbMWszubrJKqWmBphurV5AnkvPMafxIjMGZf9c"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >39</span
+            >
+          </div>
+        </div>
+        <!-- Day 38 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Silhouetted figure running against a bleak, overcast sky. Pure black and white. Wide shot emphasizing the vastness of the space and the solitary nature of the endeavor. Cold, disciplined, minimalist."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgtzNFR2tc9EYUTP2-G0aszg6Yt93Odf17EjcpDL_Drny2O4N_f_XKhmUbAXqIqojFmYGhuh25HiRCXe8_nhoe1iwPLjkoDGXCSmUI05-qRMYaP6Ky_oFfn8sH6NZEqmdeMxBmOsplY_V-HNLVyqpTe2tpAN9W8gM4z5qR1qa16yvOsH5mWF2gSr1vyD_m97QDgGjH2ZMoEjKpW_asB_xXW7QSeznNvyAvkgoFMSq99vQTc5NCv00NZAHZMjnYgUoYvbN5TzlbL9k"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >38</span
+            >
+          </div>
+        </div>
+        <!-- Day 37 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Detail shot of hands gripping a heavily knurled barbell in a dark gym. Stark lighting creates deep shadows and brilliant highlights on the metal. Black and white, intense focus, gritty yet sophisticated visual style."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7WRPxodrSGoGeC8s_Bw-_iKoCYzJ_9ZWHnBjV9ffIw70ZDaUgxOITxPkvKms6AVXraJnqCY6yu7qpsUlO8AXqeU7nLTiGse4CEvUPwQ448_GcoartEVvjiZ6WACdrfHAqnlKyfwnKocgXkLV52hwqQ1woKWz9xUEJ_HV9SHXty5bCXDpd-aPSNbDAdnfi6XFKK354vbgq-b9Yc4pZrCYeKCcKooqmygQeksj0Ug79Ufwl9RfzvPujlbGzmhc0bKgpGYTXkKye_RA"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >37</span
+            >
+          </div>
+        </div>
+        <!-- Day 36 -->
+        <div class="group relative aspect-square bg-[#121212] overflow-hidden">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale"
+            data-alt="Abstract, high-contrast shot of sweat drops on a dark floor surface. Extreme macro photography, black and white. The aesthetic is raw, minimalist, and deeply evocative of physical exertion."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq2MJo8jLexqFwovDJ6Ie-fY_SbwqGQpUriipNQBFkosi0t8PasryhKtfzWnAeYE59-Sf-4gi3MdnuoQYZcuKTu2nl6RsmG6zI8O1yATY_hLxjRVzKbDKSt27txlv32dmDylcLQL46qcNB-39PkSx-6u3ndV7Fd_REvatb-DJp-FloX-DhBdbt9kqzgunTjYgfZ5iGOTy5y80BmnXauNmAd53EyUzN8bVPTxkbE7Us2KHMJ1wfM3asS9-4r7M0gDZAs-vkwdryaKU"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <span class="font-display-lg text-headline-lg font-bold tracking-tight text-white m-0"
+              >36</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mt-lg flex justify-center">
+        <button
+          class="px-xl py-md border border-[#262626] font-button text-button uppercase text-primary hover:bg-[#121212] transition-colors"
+        >
+          Load More
+        </button>
+      </div>
+    </main>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pb-lg pt-sm bg-background border-t border-[#262626]"
+    >
+      <a
+        class="flex flex-col items-center gap-1 text-outline dark:text-outline pt-2 hover:text-primary transition-colors active:scale-95 duration-100"
+        href="#"
+      >
+        <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0"
+          >grid_view</span
+        >
+      </a>
+      <a
+        class="flex flex-col items-center gap-1 text-primary dark:text-primary border-t-2 border-primary pt-2 hover:text-primary transition-colors active:scale-95 duration-100"
+        href="#"
+      >
+        <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1"
+          >history</span
+        >
+      </a>
+    </nav>
+  </body>
+</html>

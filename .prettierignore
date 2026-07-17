@@ -1,0 +1,6 @@
+.expo/
+.convex/
+android/
+ios/
+node_modules/
+web-build/
