@@ -26,6 +26,7 @@ export const fontFamilies = {
   body: "Geist_400Regular",
   bodyMedium: "Geist_600SemiBold",
   bodyBold: "Geist_700Bold",
+  display: "PlayfairDisplay_700Bold",
   mono: "JetBrainsMono_400Regular",
   monoMedium: "JetBrainsMono_500Medium",
 } as const;
