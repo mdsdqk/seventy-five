@@ -4,7 +4,7 @@ import {
   type TextInputProps as NativeTextInputProps,
   View,
 } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { StyleSheet, useUnistyles } from "react-native-unistyles";
 
 import { Text } from "./Text";
 
@@ -27,6 +27,7 @@ export const TextInput = forwardRef<NativeTextInput, TextInputProps>(
     ref,
   ) {
     const [focused, setFocused] = useState(false);
+    const { theme } = useUnistyles();
 
     return (
       <View style={styles.field}>
@@ -50,7 +51,7 @@ export const TextInput = forwardRef<NativeTextInput, TextInputProps>(
             setFocused(true);
             onFocus?.(event);
           }}
-          placeholderTextColor={styles.placeholder.color}
+          placeholderTextColor={theme.colors.textMuted}
           style={[
             styles.input,
             focused && styles.focused,
@@ -91,8 +92,5 @@ const styles = StyleSheet.create((theme) => ({
   },
   invalid: {
     borderColor: theme.colors.error,
-  },
-  placeholder: {
-    color: theme.colors.textMuted,
   },
 }));

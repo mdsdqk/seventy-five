@@ -14,7 +14,12 @@ import {
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import { StatusBar } from "react-native";
+import {
+  StatusBar,
+  StyleSheet as NativeStyleSheet,
+  Text as NativeText,
+  View,
+} from "react-native";
 
 import { palette } from "@/design-system";
 
@@ -40,7 +45,29 @@ export default function RootLayout() {
     }
   }, [fontError, fontsLoaded]);
 
-  if (!fontsLoaded && !fontError) {
+  if (fontError) {
+    return (
+      <>
+        <StatusBar
+          backgroundColor={palette.surface}
+          barStyle="light-content"
+        />
+        <View style={fallbackStyles.container}>
+          <NativeText
+            accessibilityLiveRegion="assertive"
+            style={fallbackStyles.title}
+          >
+            Unable to load the app fonts.
+          </NativeText>
+          <NativeText style={fallbackStyles.message}>
+            Restart the app to try again.
+          </NativeText>
+        </View>
+      </>
+    );
+  }
+
+  if (!fontsLoaded) {
     return null;
   }
 
@@ -59,3 +86,25 @@ export default function RootLayout() {
     </>
   );
 }
+
+const fallbackStyles = NativeStyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    padding: 24,
+    backgroundColor: palette.surface,
+  },
+  title: {
+    color: palette.onSurface,
+    fontSize: 18,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+  message: {
+    color: palette.onSurfaceVariant,
+    fontSize: 14,
+    textAlign: "center",
+  },
+});
