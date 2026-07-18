@@ -1,17 +1,22 @@
 {
   "name": "seventy-five",
-  "main": "expo-router/entry",
+  "main": "index.ts",
   "version": "1.0.0",
   "dependencies": {
+    "@expo-google-fonts/geist": "^0.4.2",
+    "@expo-google-fonts/jetbrains-mono": "^0.4.1",
     "convex": "^1.25.0",
-    "expo": "~57.0.6",
-    "expo-router": "~57.0.6",
+    "expo": "~57.0.7",
+    "expo-font": "~57.0.1",
+    "expo-router": "~57.0.7",
     "expo-splash-screen": "~57.0.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.0",
+    "react-native-nitro-modules": "0.36.1",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "4.25.2",
+    "react-native-unistyles": "3.3.0",
     "react-native-web": "~0.21.0"
   },
   "devDependencies": {
@@ -26,6 +31,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck",
     "convex:dev": "convex dev"
   },
   "private": true
