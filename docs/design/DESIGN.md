@@ -157,7 +157,7 @@ A specialized pattern for action confirmation and task management. These must ne
 - **States**:
   - **Hover**: Background shifts to Surface Container Low (#1B1B1B).
   - **Active/Pressed**: 0.8 opacity. Transitions should be instantaneous to simulate a crisp haptic feel.
-  - **Completed**: A secondary green (#2E7D32) tick icon appears centered within the square. The border remains constant or may transition to the green color.
+  - **Completed**: A secondary green (#2E7D32) tick icon appears centered within the square. The border transitions to the green color.
 
 ### Buttons (Primary)
 
