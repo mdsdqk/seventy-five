@@ -11,75 +11,65 @@ import {
   JetBrainsMono_500Medium,
   useFonts as useJetBrainsMonoFonts,
 } from "@expo-google-fonts/jetbrains-mono";
+import {
+  PlayfairDisplay_700Bold,
+  useFonts as usePlayfairFonts,
+} from "@expo-google-fonts/playfair-display";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import {
-  StatusBar,
-  StyleSheet as NativeStyleSheet,
-  Text as NativeText,
-  View,
-} from "react-native";
+import { StatusBar, StyleSheet as NativeStyleSheet, Text as NativeText, View } from "react-native";
 
 import { palette } from "@/design-system";
 
 void SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [geistLoaded, geistError] = useGeistFonts({
+  const [playfairLoaded, playfairError] = usePlayfairFonts({
+    PlayfairDisplay_700Bold,
+  });
+  useGeistFonts({
     Geist_400Regular,
     Geist_600SemiBold,
     Geist_700Bold,
   });
-  const [monoLoaded, monoError] = useJetBrainsMonoFonts({
+  useJetBrainsMonoFonts({
     JetBrainsMono_400Regular,
     JetBrainsMono_500Medium,
   });
 
-  const fontsLoaded = geistLoaded && monoLoaded;
-  const fontError = geistError ?? monoError;
+  const splashReady = playfairLoaded || Boolean(playfairError);
 
   useEffect(() => {
-    if (fontsLoaded || fontError) {
+    if (splashReady) {
       void SplashScreen.hideAsync();
     }
-  }, [fontError, fontsLoaded]);
+  }, [splashReady]);
 
-  if (fontError) {
+  if (playfairError) {
     return (
       <>
-        <StatusBar
-          backgroundColor={palette.surface}
-          barStyle="light-content"
-        />
+        <StatusBar backgroundColor={palette.black} barStyle="light-content" />
         <View style={fallbackStyles.container}>
-          <NativeText
-            accessibilityLiveRegion="assertive"
-            style={fallbackStyles.title}
-          >
-            Unable to load the app fonts.
+          <NativeText accessibilityLiveRegion="assertive" style={fallbackStyles.title}>
+            Unable to load the splash screen fonts.
           </NativeText>
-          <NativeText style={fallbackStyles.message}>
-            Restart the app to try again.
-          </NativeText>
+          <NativeText style={fallbackStyles.message}>Restart the app to try again.</NativeText>
         </View>
       </>
     );
   }
 
-  if (!fontsLoaded) {
+  if (!splashReady) {
     return null;
   }
 
   return (
     <>
-      <StatusBar
-        backgroundColor={palette.surface}
-        barStyle="light-content"
-      />
+      <StatusBar backgroundColor={palette.black} barStyle="light-content" />
       <Stack
         screenOptions={{
-          contentStyle: { backgroundColor: palette.surface },
+          contentStyle: { backgroundColor: palette.black },
           headerShown: false,
         }}
       />
@@ -94,7 +84,7 @@ const fallbackStyles = NativeStyleSheet.create({
     justifyContent: "center",
     gap: 8,
     padding: 24,
-    backgroundColor: palette.surface,
+    backgroundColor: palette.black,
   },
   title: {
     color: palette.onSurface,

@@ -1,10 +1,10 @@
 import { useEffect, useMemo } from "react";
-import { Animated, Easing, Image, Platform, StatusBar, View } from "react-native";
+import { Animated, Easing, Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet } from "react-native-unistyles";
 
 import { Text } from "@/components";
-import { palette } from "@/design-system";
+import { fontFamilies } from "@/design-system";
 
 const splashIcon = require("../assets/images/splash-icon.png");
 
@@ -51,7 +51,6 @@ export default function Index() {
 
   return (
     <SafeAreaView edges={["top", "right", "bottom", "left"]} style={styles.safe}>
-      <StatusBar backgroundColor={palette.black} barStyle="light-content" />
       <View style={styles.container}>
         <Animated.View style={[styles.logoFrame, logoAnimatedStyle]}>
           <Image
@@ -107,12 +106,7 @@ const styles = StyleSheet.create((theme) => ({
   },
   wordmark: {
     color: theme.colors.primary,
-    fontFamily: Platform.select({
-      android: "serif",
-      ios: "Georgia",
-      web: "Playfair Display, Georgia, serif",
-      default: "serif",
-    }),
+    fontFamily: fontFamilies.display,
     fontSize: {
       mobile: 40,
       tablet: 64,
